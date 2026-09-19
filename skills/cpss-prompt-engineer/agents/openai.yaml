@@ -1,7 +1,10 @@
 interface:
-  display_name: "Prompt Engineer"
-  short_description: "Improve a particular prompt the user wants dialed in."
+  display_name: Prompt Engineer
+  short_description: Build and rigorously improve ChatGPT prompts on explicit command.
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
