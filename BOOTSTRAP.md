@@ -82,6 +82,10 @@ Whenever the user must perform an interface action:
 
 If the action would navigate away from this bootstrap conversation, tell the user to **open a new browser tab first and leave the bootstrap tab open**.
 
+## Step 0 — Record starter version
+
+Read https://raw.githubusercontent.com/TonyHeflin/ChatGPTProjects-SkillsStarter/main/VERSION and record that version in the environment inventory. Treat the repository version as provenance, not proof that every component was successfully installed.
+
 ## Step 1 — Quick non-destructive collision preflight
 
 Do this **before creating or installing anything**.
@@ -103,6 +107,8 @@ If Projects cannot be inspected directly, ask the user to use a **new browser ta
 If Skills cannot be inspected directly but Skills are available in the account, ask the user to use a **new browser tab** and open **Sidebar → Plugins → Skills**. Have them check Installed and Created by me for obvious same-name or same-purpose candidates. Then have them return to the bootstrap tab.
 
 Do not ask for a complete catalog unless a specific collision cannot be resolved without it.
+
+Also make one narrow check for **global Custom Instructions** if the account uses them. The purpose is not to review tone or preferences. Check only for substantive workflow, research, routing, tool-use, clarification, or instruction-authority rules that could materially conflict with the starter. Preserve them unchanged. If they cannot be inspected directly, ask only whether such rules exist and inspect them only when a plausible conflict is identified.
 
 ### Collision rule
 
@@ -159,6 +165,8 @@ When Skill creation is available:
 3. If ChatGPT presents an installation prompt/card, tell the user to click **Install**.
 4. Do not claim installation before the user approves it or installed state is otherwise verified.
 5. If installation requires leaving the current conversation, tell the user to use a new browser tab and return afterward.
+6. After creation/installation, perform a **source-fidelity check** before marking the Skill complete. Compare the installed/generated Skill against the canonical repository source for its internal name, trigger description, instruction body, and required supporting references. Do not assume a generated Skill is identical merely because it was created from a prompt.
+7. If installed Skill source cannot be inspected well enough to compare, mark fidelity as **unverified** rather than claiming exact installation. Continue only with the user's informed acceptance of that limitation.
 
 If manual inspection is needed, use **Sidebar → Plugins → Skills**.
 
@@ -227,12 +235,14 @@ Verify or accurately classify:
 - no existing component was modified without explicit user direction;
 - any substituted existing component was actually shown to be equal or better;
 - installed starter Skills/capabilities and any blocked Skill setup;
+- source-fidelity status for each installed starter Skill;
 - General Analysis / Research Project;
 - canonical Project Instruction Project;
 - environment inventory and its durable location;
 - Progressive Interview's independent trigger behavior;
 - Environment Help's ability to explain customization;
 - every user-mediated step included exact UI and context-transition guidance;
+- repository version provenance is recorded;
 - GitHub-source access or its paste/upload fallback is working.
 
 Finish with a concise reconciliation:
