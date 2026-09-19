@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prompt / Project Reviewer"
+  short_description: "Audit persistent Project and Skill instruction systems."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
