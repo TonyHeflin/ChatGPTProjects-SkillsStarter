@@ -1,0 +1,7 @@
+interface:
+  display_name: "Architecture Governance"
+  short_description: "Decide where environment capabilities and responsibilities belong."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
