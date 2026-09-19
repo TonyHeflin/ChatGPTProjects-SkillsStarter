@@ -1,7 +1,10 @@
 interface:
-  display_name: "Environment Help"
-  short_description: "Explain and customize the configured ChatGPT environment."
+  display_name: Environment Help
+  short_description: Explain and navigate your configured ChatGPT environment
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
