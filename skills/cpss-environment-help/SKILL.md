@@ -55,13 +55,13 @@ If the question actually requires architectural change, such as:
 - whether trigger coverage or ownership is structurally wrong;
 - how the whole environment should be reorganized;
 
-route conceptually to `architecture-governance` instead of deciding the redesign here.
+route conceptually to `cpss-architecture-governance` instead of deciding the redesign here.
 
 If the question asks to create or update a Skill, route to `skill-creator`.
 
-If the question asks to engineer/refactor prompts or Project instructions and meets the Prompt Engineer invocation rules, route to `prompt-engineer`.
+If the question asks to engineer/refactor prompts or Project instructions and meets the Prompt Engineer invocation rules, route to `cpss-prompt-engineer`.
 
-If the question asks to audit an existing prompt or Project instruction system, route to `prompt-project-reviewer`.
+If the question asks to audit an existing prompt or Project instruction system, route to `cpss-prompt-project-reviewer`.
 
 ## Status language
 
@@ -74,6 +74,14 @@ Use these labels when status matters:
 - **Unknown** - cannot be established from available evidence.
 
 Never convert `planned`, `historical`, or `unknown` into `active` because it would make the explanation simpler.
+
+## Existing-environment safety
+
+When the account already contains Projects, Skills, or durable instructions, preserve them by default. Check only for collisions relevant to the proposed change. Do not treat similar names, descriptions, or purposes as evidence that an existing component is an adequate substitute. Only recommend substitution after inspecting actual instructions/behavior and establishing equal-or-greater rigor for the required role. If equivalence cannot be established, say it is unproven. If a naming, trigger, instruction, or role conflict remains, explain it and let the user choose how to resolve it.
+
+## User-mediated actions
+
+When the user must perform an interface action, state what is already prepared, give exact current UI steps when known, explain what success looks like, and say whether the action navigates away. If it would leave the current conversation, tell the user to open a new browser tab first and keep the current tab open.
 
 ## Bootstrap help
 
