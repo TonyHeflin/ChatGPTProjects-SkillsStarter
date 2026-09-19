@@ -21,6 +21,14 @@ For example:
 
 A research Skill should not need to be rebuilt separately for woodworking, business, and writing. Each Project can use the same research method while supplying its own subject matter and constraints.
 
+## Compatibility
+
+The **Project** foundation can still be useful on accounts where native personal Skills are unavailable. The full Skills layer currently requires an eligible ChatGPT **Business, Enterprise, Healthcare, or Edu** account/workspace and may also depend on workspace settings.
+
+The bootstrap therefore treats Skills as environment-dependent rather than assuming every ChatGPT account can install them. If Skills are unavailable, it should preserve a useful Projects-only foundation instead of pretending the Skill layer was installed.
+
+OpenAI's current Skills availability guidance: https://help.openai.com/en/articles/20001066
+
 ## What this starter sets up
 
 The starter provides a small foundation that can grow with you rather than forcing a large structure up front.
