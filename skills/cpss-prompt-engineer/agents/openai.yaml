@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prompt Engineer"
+  short_description: "Improve a particular prompt the user wants dialed in."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
