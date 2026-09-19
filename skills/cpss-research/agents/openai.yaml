@@ -1,7 +1,12 @@
 interface:
-  display_name: "Research"
-  short_description: "Build a concise source-grounded evidence base."
+  display_name: Research
+  short_description: Research ideas and questions into source-grounded evidence
+  default_prompt: Use $research to research this idea or question and preserve a complete
+    handoff record.
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
