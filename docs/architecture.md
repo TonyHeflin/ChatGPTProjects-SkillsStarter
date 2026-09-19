@@ -80,6 +80,12 @@ Whenever setup requires user action, ChatGPT must explain:
 
 If navigation would leave the bootstrap chat, the user should be told to use a **new browser tab** and keep the bootstrap tab open.
 
+## Source fidelity and provenance
+
+The repository version in `VERSION` identifies the starter source used for a deployment. The environment inventory should record that version.
+
+A Skill is source-complete only when every file listed for it in `skills/SOURCE_MANIFEST.md` is included. After Skill creation/installation, compare the installed/generated Skill against that complete source set when the environment permits inspection. If exact comparison is unavailable, record fidelity as unverified rather than assuming equivalence.
+
 ## Documentation
 
 Markdown files in the repository are canonical.
