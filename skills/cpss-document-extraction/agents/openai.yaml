@@ -1,0 +1,7 @@
+interface:
+  display_name: "Document Extraction"
+  short_description: "Extract and validate structured information from source documents."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
