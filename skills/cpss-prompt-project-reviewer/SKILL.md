@@ -35,11 +35,11 @@ Audit:
 7. Check applicable Project instruction length limits when the user provides or the environment establishes one.
 8. Reassess the whole system after findings; do not let local cleanliness hide architectural conflict.
 
-## Automatic boundary with Project Architecture Reviewer
+## Architecture boundary
 
-If the real question is broader than prompts/instructions and materially involves workflows, files, persistent state, checkpoints, tools, multiple domain skills, lifecycle, or cross-skill handoffs, route conceptually to `project-architecture-reviewer` rather than pretending this narrower review is sufficient.
+If the real question is broader than prompts/instructions and materially involves workflow ownership, persistent state, files, lifecycle, tools, cross-skill handoffs, or deciding where capabilities belong, route conceptually to `cpss-architecture-governance` rather than pretending this narrower review is sufficient.
 
-If both are relevant, this reviewer owns the detailed instruction-quality findings; the architecture reviewer owns ecosystem-level conclusions.
+This reviewer owns detailed instruction-quality findings; Architecture Governance owns ecosystem-level placement and ownership decisions.
 
 ## Findings
 
@@ -71,7 +71,7 @@ Lead substantial reviews with a BLUF stating whether the instruction system is c
 
 Then provide the highest-impact findings, missing context that limits the review, and what should remain unchanged.
 
-Do not rewrite the full prompt unless the user asks. When the user asks to implement fixes, hand the justified changes to the prompt-engineering workflow rather than inventing a separate rewrite methodology.
+Do not rewrite the full prompt unless the user asks. When the user asks to implement justified changes to durable Project or Skill instructions, hand them to the canonical `project-instruction` capability. Use `cpss-prompt-engineer` only for a particular prompt under its explicit invocation rules.
 
 ## Guardrails
 
