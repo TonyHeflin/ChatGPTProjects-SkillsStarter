@@ -1,7 +1,12 @@
 interface:
-  display_name: "Research Validation"
-  short_description: "Validate research claims, freshness, sourcing, and uncertainty."
+  display_name: Research Validation
+  short_description: Validate sources, freshness, and claims before presenting findings
+  default_prompt: Use $research-validation to verify sources, check freshness, and
+    qualify research findings before answering.
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
