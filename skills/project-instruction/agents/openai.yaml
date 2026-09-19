@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Instruction"
+  short_description: "Design durable Project and Skill instructions."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
