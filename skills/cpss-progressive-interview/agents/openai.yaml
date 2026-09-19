@@ -1,0 +1,7 @@
+interface:
+  display_name: "Progressive Interview"
+  short_description: "Replace questionnaire dumps with adaptive clarification."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
