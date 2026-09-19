@@ -1,0 +1,7 @@
+interface:
+  display_name: "Environment Help"
+  short_description: "Explain and customize the configured ChatGPT environment."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
