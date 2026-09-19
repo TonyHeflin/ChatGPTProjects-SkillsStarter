@@ -156,16 +156,21 @@ Namespacing does not eliminate functional trigger conflicts. Evaluate meaningful
 
 ## Step 2 — Create/install infrastructure Skills when supported
 
+Before creating any Skill, read the complete source manifest at:
+https://raw.githubusercontent.com/TonyHeflin/ChatGPTProjects-SkillsStarter/main/skills/SOURCE_MANIFEST.md
+
+For that Skill, load **every file listed in the manifest**, not only `SKILL.md`. Supporting references and UI metadata are part of the canonical source when listed.
+
 Skills availability is environment-dependent. Do not pretend Skills are installed capabilities when the current account does not support them.
 
 When Skill creation is available:
 
-1. Load the canonical `SKILL.md` for the current Skill.
+1. Load the complete canonical source set for the current Skill from `skills/SOURCE_MANIFEST.md`.
 2. Ask ChatGPT/Skill Creator to create that Skill from the supplied definition without silently changing its scope or trigger.
 3. If ChatGPT presents an installation prompt/card, tell the user to click **Install**.
 4. Do not claim installation before the user approves it or installed state is otherwise verified.
 5. If installation requires leaving the current conversation, tell the user to use a new browser tab and return afterward.
-6. After creation/installation, perform a **source-fidelity check** before marking the Skill complete. Compare the installed/generated Skill against the canonical repository source for its internal name, trigger description, instruction body, and required supporting references. Do not assume a generated Skill is identical merely because it was created from a prompt.
+6. After creation/installation, perform a **source-fidelity check** before marking the Skill complete. Compare the installed/generated Skill against the complete canonical source set: internal name, trigger description, instruction body, UI metadata where preserved by the platform, and every required supporting reference listed in the manifest. Do not assume a generated Skill is identical merely because it was created from a prompt.
 7. If installed Skill source cannot be inspected well enough to compare, mark fidelity as **unverified** rather than claiming exact installation. Continue only with the user's informed acceptance of that limitation.
 
 If manual inspection is needed, use **Sidebar → Plugins → Skills**.
