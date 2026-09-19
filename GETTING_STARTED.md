@@ -34,6 +34,8 @@ If a later linked file cannot be retrieved, paste or upload that individual Mark
 
 ## Skills availability
 
+Native personal Skills are currently available to eligible ChatGPT Business, Enterprise, Healthcare, and Edu users, subject to workspace settings and product availability. Other accounts can still use the Project-based foundation, but the bootstrap must not claim that the full Skill layer was installed.
+
 Skills are not available in every ChatGPT account or workspace configuration. The bootstrap should inspect the current environment instead of assuming Skill creation or installation is available.
 
 When Skills are available and ChatGPT creates one from the supplied definition, you may be shown an **Install** prompt or button. You must approve that installation. ChatGPT should not claim a Skill is installed before approval or verified installed state.
