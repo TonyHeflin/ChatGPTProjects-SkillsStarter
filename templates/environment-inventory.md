@@ -6,10 +6,16 @@ A lightweight self-description of this ChatGPT environment. Record meaningful ar
 
 Do not store passwords, tokens, secrets, or inappropriate private account details here.
 
+## Starter provenance
+
+- Starter version:
+- Repository: https://github.com/TonyHeflin/ChatGPTProjects-SkillsStarter
+- Bootstrap date:
+
 ## Foundational capabilities
 
-| Component | Purpose | Provenance | Status |
-|---|---|---|---|
+| Component | Purpose | Provenance | Fidelity | Status |
+|---|---|---|---|---|
 
 ## Projects / domain workspaces
 
