@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Validation"
+  short_description: "Validate research claims, freshness, sourcing, and uncertainty."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
