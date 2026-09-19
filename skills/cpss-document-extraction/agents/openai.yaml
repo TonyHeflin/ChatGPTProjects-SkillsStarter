@@ -1,7 +1,13 @@
 interface:
-  display_name: "Document Extraction"
-  short_description: "Extract and validate structured information from source documents."
+  display_name: Document Extraction
+  short_description: Extract and validate data from documents.
+  default_prompt: Use $document-extraction to extract and validate structured information
+    from screenshots, PDFs, spreadsheets, pasted tables, or typed documents before
+    downstream analysis.
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
