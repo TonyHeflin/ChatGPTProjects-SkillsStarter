@@ -1,7 +1,10 @@
 interface:
-  display_name: "Prompt / Project Reviewer"
-  short_description: "Audit persistent Project and Skill instruction systems."
+  display_name: Prompt / Project Reviewer
+  short_description: Audit Project instructions and skill routing
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
