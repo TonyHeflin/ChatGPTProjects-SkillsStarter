@@ -1,7 +1,10 @@
 interface:
-  display_name: "Good Idea Trasher"
-  short_description: "Stress-test concrete proposals and plans."
+  display_name: Good Idea Trasher
+  short_description: Adversarially stress-test developed proposals and plans
 policy:
   products:
   - chatgpt
+  - codex
+  - api
+  - atlas
   allow_implicit_invocation: true
