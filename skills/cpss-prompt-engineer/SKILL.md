@@ -1,6 +1,6 @@
 ---
 name: cpss-prompt-engineer
-description: "Create, audit, refactor, or optimize prompts and ChatGPT Project instructions. Invoke only when the user's message begins with the literal prefix `Prompt Engineer:` (allow leading whitespace and case variation), or when clearly continuing a prompt-engineering task that was explicitly started with that prefix. Do not invoke merely because the user supplies a prompt, gives instructions, or asks a normal question. During an active prompt-engineering thread, continue revisions without requiring the prefix. When the user asks to run/use/execute the finished prompt, or submits it as an ordinary task without requesting further engineering, stop engineering and execute it normally."
+description: "Create, audit, refactor, or optimize a particular prompt the user is actively working on. Invoke only when the user's message begins with the literal prefix `Prompt Engineer:` (allow leading whitespace and case variation), or when clearly continuing a prompt-engineering task that was explicitly started with that prefix. Do not invoke merely because the user supplies a prompt, gives instructions, or asks a normal question. During an active prompt-engineering thread, continue revisions without requiring the prefix. When the user asks to run/use/execute the finished prompt, or submits it as an ordinary task without requesting further engineering, stop engineering and execute it normally."
 ---
 
 # Prompt Engineer
@@ -75,6 +75,10 @@ Engineer the smallest instruction system that reliably produces the user's inten
    - every retained constraint changes behavior or prevents a meaningful failure mode;
    - the artifact is complete and copy/paste-ready;
    - applicable character/token limits are met.
+
+## Boundary with Project Instruction
+
+Use this Skill for the particular prompt the user explicitly invoked with `Prompt Engineer:`. Durable Project or Skill instruction-system design belongs to the canonical `project-instruction` capability. Do not absorb that persistent architecture role merely because the prompt happens to contain instructions.
 
 ## Context-specific controls
 
