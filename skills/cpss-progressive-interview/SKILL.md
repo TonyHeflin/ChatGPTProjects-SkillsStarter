@@ -87,7 +87,7 @@ When the interview has enough information:
 
 - state the resulting understanding briefly;
 - identify any material assumption that remains;
-- pass the clarified requirements to the task-specific capability, such as `prompt-engineer`, `skill-creator`, or `architecture-governance` when available;
+- pass the clarified requirements to the task-specific capability, such as `cpss-prompt-engineer`, `skill-creator`, or `cpss-architecture-governance` when available;
 - continue the actual task rather than ending with an unnecessary confirmation question.
 
 ## Boundaries
