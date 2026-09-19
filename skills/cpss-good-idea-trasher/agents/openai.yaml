@@ -1,0 +1,7 @@
+interface:
+  display_name: "Good Idea Trasher"
+  short_description: "Stress-test concrete proposals and plans."
+policy:
+  products:
+  - chatgpt
+  allow_implicit_invocation: true
