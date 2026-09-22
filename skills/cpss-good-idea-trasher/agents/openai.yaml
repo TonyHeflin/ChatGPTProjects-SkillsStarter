@@ -1,10 +1,8 @@
 interface:
-  display_name: Good Idea Trasher
+  display_name: "CPSS Good Idea Trasher"
   short_description: Adversarially stress-test developed proposals and plans
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
