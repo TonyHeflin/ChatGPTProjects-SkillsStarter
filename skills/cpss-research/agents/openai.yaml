@@ -1,12 +1,10 @@
 interface:
-  display_name: Research
+  display_name: "CPSS Research"
   short_description: Research ideas and questions into source-grounded evidence
-  default_prompt: Use $research to research this idea or question and preserve a complete
+  default_prompt: Use $cpss-research to research this idea or question and preserve a complete
     handoff record.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
