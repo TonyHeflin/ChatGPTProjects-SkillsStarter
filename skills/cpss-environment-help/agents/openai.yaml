@@ -1,10 +1,8 @@
 interface:
-  display_name: Environment Help
+  display_name: "CPSS Environment Help"
   short_description: Explain and navigate your configured ChatGPT environment
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
