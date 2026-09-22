@@ -1,10 +1,8 @@
 interface:
-  display_name: Prompt Engineer
+  display_name: "CPSS Prompt Engineer"
   short_description: Build and rigorously improve ChatGPT prompts on explicit command.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
