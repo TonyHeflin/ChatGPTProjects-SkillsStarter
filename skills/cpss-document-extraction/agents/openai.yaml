@@ -1,7 +1,7 @@
 interface:
   display_name: "CPSS Document Extraction"
   short_description: Extract and validate data from documents.
-  default_prompt: Use $document-extraction to extract and validate structured information
+  default_prompt: Use $cpss-document-extraction to extract and validate structured information
     from screenshots, PDFs, spreadsheets, pasted tables, or typed documents before
     downstream analysis.
 policy:
