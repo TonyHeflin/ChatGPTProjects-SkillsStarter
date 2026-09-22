@@ -29,7 +29,7 @@ The starter's custom infrastructure Skills use `cpss-` internal names where appr
 1. Make starter provenance visible.
 2. Reduce direct name collisions in existing accounts.
 
-Human-facing display names remain clean and descriptive.
+Human-facing display names for CPSS infrastructure Skills are also prefixed with **CPSS** so the installed Skill remains visibly distinct from platform-provided or pre-existing Skills. The canonical Project Instruction Skill is the exception and remains unprefixed.
 
 The dedicated `project-instruction` Skill remains unprefixed to match the canonical Project Instruction role.
 
