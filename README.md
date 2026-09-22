@@ -37,9 +37,9 @@ It includes:
 
 - **General Analysis / Research** — a broadly useful Project for careful reasoning, comparison, fact checking, research, and evaluation.
 - **Project Instruction** — the canonical workspace for designing and maintaining persistent Project and Skill instructions.
-- **Prompt Engineer** — helps improve a particular prompt you are working on.
-- **Progressive Interview** — prevents ChatGPT from dumping a large questionnaire on you when several dependent clarifying questions are needed.
-- **Environment Help** — a plain-language guide for questions such as “How should I organize this?”, “Should this be a Project or a Skill?”, or “I want ChatGPT to help me with this kind of work.”
+- **CPSS Prompt Engineer** — helps improve a particular prompt you are working on.
+- **CPSS Progressive Interview** — prevents ChatGPT from dumping a large questionnaire on you when several dependent clarifying questions are needed.
+- **CPSS Environment Help** — a plain-language guide for questions such as “How should I organize this?”, “Should this be a Project or a Skill?”, or “I want ChatGPT to help me with this kind of work.”
 - Reusable research, review, architecture, validation, and document-analysis capabilities.
 - A lightweight inventory so the environment remains understandable as it grows.
 
@@ -55,7 +55,7 @@ Existing Projects, Skills, files, instructions, and settings are left unchanged.
 
 If an existing component appears similar to one supplied here, similarity is not enough to substitute it. The bootstrap should only treat an existing component as satisfying a starter requirement when its actual behavior can be inspected and shown to provide **equal or greater rigor** for the required role. If that cannot be established, the existing component is preserved but not assumed to be equivalent.
 
-The starter’s custom infrastructure Skills use `cpss-` internal names where appropriate to make provenance clear and reduce direct naming collisions. **Project Instruction remains canonical and unprefixed.** Namespacing does not eliminate functional trigger conflicts, so the bootstrap still checks for meaningful overlap before installation.
+The starter’s custom infrastructure Skills use `cpss-` internal names and **CPSS-prefixed display names** to make provenance clear and reduce both internal and user-facing naming collisions. **Project Instruction remains canonical and unprefixed.** Namespacing does not eliminate functional trigger conflicts, so the bootstrap still checks for meaningful overlap before installation.
 
 ## Project status
 
