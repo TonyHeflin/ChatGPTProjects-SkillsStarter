@@ -3,5 +3,6 @@ interface:
   short_description: "Design durable Project and Skill instructions."
 policy:
   products:
-  - chatgpt
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
