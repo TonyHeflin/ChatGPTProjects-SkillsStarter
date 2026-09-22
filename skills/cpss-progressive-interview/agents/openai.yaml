@@ -1,10 +1,8 @@
 interface:
-  display_name: Progressive Interview
+  display_name: "CPSS Progressive Interview"
   short_description: Clarify complex requests one useful question at a time
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
