@@ -26,6 +26,16 @@ An existing component may satisfy a starter requirement only when its actual beh
 
 Existing components remain unchanged unless you explicitly choose otherwise.
 
+## If something fails during setup
+
+Do **not** restart the bootstrap.
+
+The bootstrap is designed to keep a state ledger and treat most failures as local to the affected component. It should continue independent work, record the blocker, and resume automatically when the blocker is resolved.
+
+After fixing a problem or completing a requested UI action, return to the original bootstrap chat and reply with something simple such as **"fixed"**, **"done"**, or **"continue"**. ChatGPT should read the existing ledger and resume from the first actionable incomplete item without repeating completed work.
+
+If ChatGPT instead tries to restart the whole setup, point it back to the **Resumable bootstrap state** section in `BOOTSTRAP.md`.
+
 ## If ChatGPT cannot read the GitHub link
 
 Open [BOOTSTRAP.md](BOOTSTRAP.md), copy its contents, and paste them into the bootstrap chat.
