@@ -69,6 +69,57 @@ Before claiming completion, classify each setup action accurately:
 
 Never claim a Project, Skill, Library file, connector state, or other component exists unless it was created, observed, or confirmed by the user.
 
+## Resumable bootstrap state
+
+Treat bootstrap as a resumable workflow, not a single linear response.
+
+Maintain a compact **bootstrap ledger** in the conversation from the first preflight onward. Track each major component or step with one of these states:
+
+- **PENDING** — not started yet.
+- **IN PROGRESS** — ChatGPT is actively working on it.
+- **USER ACTION** — prepared; waiting for the user to complete a required interface action.
+- **BLOCKED** — cannot proceed because of a specific error, collision, unavailable capability, or unresolved dependency.
+- **COMPLETE** — finished and verified to the level available.
+- **SKIPPED / DEFERRED** — intentionally not being completed now, with the reason recorded.
+
+At minimum track:
+
+- collision preflight;
+- each starter Skill separately;
+- General Analysis / Research Project;
+- Project Instruction Project;
+- environment inventory;
+- final validation.
+
+### Failure and blocker rule
+
+A failure in one component is **component-local by default**.
+
+When a component fails:
+
+1. Mark that component **BLOCKED** and record the exact blocker plus the smallest known resolution.
+2. Do not mark unrelated components failed.
+3. Continue every later step that does not depend on the blocked component.
+4. Do not restart completed work.
+5. Do not abandon bootstrap merely because one component failed.
+6. If the blocker prevents a dependent step, mark only that dependent step BLOCKED or PENDING with the dependency noted.
+
+Only stop the whole bootstrap when the unresolved blocker genuinely prevents every remaining useful step.
+
+### Resume rule
+
+Whenever the user returns from a UI action, says a blocker is resolved, provides missing information, or otherwise continues the bootstrap:
+
+1. Read the existing bootstrap ledger before doing anything else.
+2. Update the affected component's state.
+3. Resume automatically at the first actionable **USER ACTION**, **BLOCKED**, or **PENDING** item whose dependencies are satisfied.
+4. Continue through subsequent independent work.
+5. Never ask the user to restart the bootstrap or repeat completed setup unless verification shows that completed work is invalid.
+
+If the conversation context is incomplete but an environment inventory or prior reconciliation is available, reconstruct the smallest reliable ledger from verified state and continue. Do not guess completed state.
+
+After any material blocker or user-mediated step, show a short ledger update so the user knows what is complete, blocked, and next.
+
 ## Mandatory user-interface rule
 
 Whenever the user must perform an interface action:
@@ -165,6 +216,8 @@ Skills availability is environment-dependent. Do not pretend Skills are installe
 
 When Skill creation is available:
 
+Process Skills **independently**. A creation, naming, validation, installation, or fidelity failure for one Skill must not stop creation of other Skills unless the failed Skill is a true dependency of the next operation.
+
 1. Load the complete canonical source set for the current Skill from `skills/SOURCE_MANIFEST.md`.
 2. Ask ChatGPT/Skill Creator to create that Skill from the supplied definition without silently changing its scope or trigger.
 3. If ChatGPT presents an installation prompt/card, tell the user to click **Install**.
@@ -249,6 +302,8 @@ Verify or accurately classify:
 - every user-mediated step included exact UI and context-transition guidance;
 - repository version provenance is recorded;
 - GitHub-source access or its paste/upload fallback is working.
+
+Before final reconciliation, resolve or accurately preserve every ledger entry. A bootstrap with blocked items may still finish its currently possible work, but it must not call the whole environment complete.
 
 Finish with a concise reconciliation:
 
