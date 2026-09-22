@@ -1,12 +1,10 @@
 interface:
-  display_name: Research Validation
+  display_name: "CPSS Research Validation"
   short_description: Validate sources, freshness, and claims before presenting findings
-  default_prompt: Use $research-validation to verify sources, check freshness, and
+  default_prompt: Use $cpss-research-validation to verify sources, check freshness, and
     qualify research findings before answering.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true
