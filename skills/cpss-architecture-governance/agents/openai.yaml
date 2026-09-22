@@ -1,7 +1,7 @@
 interface:
-  display_name: "Architecture Governance"
+  display_name: "CPSS Architecture Governance"
   short_description: "Decide where environment capabilities and responsibilities belong."
 policy:
   products:
-  - chatgpt
+  - CHAT
   allow_implicit_invocation: true
